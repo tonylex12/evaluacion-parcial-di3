@@ -9,3 +9,11 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.mat-mdc-list-base {
+  width: 20%;
+}
+
+.mdc-button {
+  margin: 16px 0;
+}

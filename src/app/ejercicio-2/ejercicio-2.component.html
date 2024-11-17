@@ -1,1 +1,21 @@
-<p>ejercicio-2 works!</p>
+<mat-list>
+  <mat-list-item>Calcular promedio de notas</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Nota 1: {{ nota1 }}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Nota 2: {{ nota2 }}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Nota 3: {{ nota3 }}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Nota 4: {{ nota4 }}</mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+
+<button mat-flat-button (click)="calcularPromedio()">Calcular promedio</button>
+@if (notaMasBaja != 0) {
+<mat-list>
+  <mat-list-item>Nota mas baja: {{ notaMasBaja }}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Promedio: {{ promedio }}</mat-list-item>
+</mat-list>
+}
