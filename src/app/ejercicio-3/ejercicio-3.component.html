@@ -1,1 +1,17 @@
-<p>ejercicio-3 works!</p>
+<mat-list>
+  <mat-list-item>Definir si debe sacar DNI</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Año de nacimiento: {{ anioDeNacimiento }}</mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+
+<button mat-flat-button (click)="sacarDni()">Definir</button>
+@if (debeSacarDni) {
+<mat-list>
+  <mat-list-item>Debe sacar su DNI, tiene {{ edad }} años</mat-list-item>
+</mat-list>
+} @else if (!debeSacarDni && edad > 0) {
+<mat-list>
+  <mat-list-item>No debe sacar su DNI, tiene {{ edad }} años</mat-list-item>
+</mat-list>
+}
