@@ -1,0 +1,21 @@
+<mat-list>
+  <mat-list-item>Calcular costo de estacionamiento</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Horas: {{ horas }}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item>Minutos: {{ minutos }}</mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item
+    >Costo por hora: {{ costoPorHora | currency : "S/." }}</mat-list-item
+  >
+  <mat-divider></mat-divider>
+</mat-list>
+
+<button mat-flat-button (click)="calcularCosto()">Calcular costo</button>
+@if (costoTotal != 0) {
+<mat-list>
+  <mat-list-item
+    >Costo total: {{ costoTotal | currency : "S/." }}</mat-list-item
+  >
+</mat-list>
+}
